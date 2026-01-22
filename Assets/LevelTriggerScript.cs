@@ -4,7 +4,8 @@ public class levelTriggerScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-
+    public GameObject levelToLoad;
+    public Transform spawnLocation;
   public LevelManager levelManager;  
 
     void Start()
@@ -28,8 +29,9 @@ public class levelTriggerScript : MonoBehaviour
             //levelChange();
 
 
+          //  levelManager.levelChange();
 
-            levelManager.levelChange();
+            levelManager.levelChange(levelToLoad, spawnLocation);
 
 
         }
@@ -39,26 +41,6 @@ public class levelTriggerScript : MonoBehaviour
     }
 
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -21,20 +21,20 @@ public class LevelManager : MonoBehaviour
     private GameObject player; 
     private GameObject currentActiveLevel;
     public Transform spawnLocation;
-
+    public GameObject levelToLoad;
     public void Start()
     {
-        currentActiveLevel = level01;
+        currentActiveLevel = level01; 
         player = ServiceHub.Instance.playerController.gameObject;
     }
 
-    public void levelChange(GameObject levelToLoad, Transform spawnPoint)
+    public void levelChange(GameObject levelToLoad, Transform spawnLocation)
     {
         currentActiveLevel.SetActive(false);
         levelToLoad.SetActive(true);
         currentActiveLevel = levelToLoad;
 
-        player.transform.position = spawnPoint.position;
+        player.transform.position = spawnLocation.position;
     }
 
 
